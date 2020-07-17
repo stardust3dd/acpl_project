@@ -1,0 +1,282 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <link rel = "icon" href ="{% static 'acpl/img/A.png' %}"> 
+    <title>Acrisius - {{blog.title}} (Blog)</title>
+    <meta name="description" content="">
+    <meta name="msapplication-tap-highlight" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--  Bootstrap 3-->
+    <link rel="stylesheet" href="{% static 'acpl/css/bootstrap.min.css' %}">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="{% static 'acpl/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'acpl/css/owl.theme.css.png' %}">
+
+    <!--  Slider -->
+    <link rel="stylesheet" href="{% static 'acpl/css/jquery.kenburnsy.css' %}">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="{% static 'acpl/css/animate.css' %}">
+
+    <!-- Web Icons Font -->
+    <link rel="stylesheet" href="{% static 'acpl/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" href="{% static 'acpl/css/iconmoon.css' %}">
+    <link rel="stylesheet" href="{% static 'acpl/css/et-line.css' %}">
+    <link rel="stylesheet" href="{% static 'acpl/css/ionicons.css' %}">
+
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="{% static 'acpl/css/magnific-popup.css' %}">
+
+    <!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="{% static 'acpl/css/tabs.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'acpl/css/tabstyles.css' %}" />
+
+    <!-- Loader Style -->
+    <!--<link rel="stylesheet" href="css/loader-2.css">-->
+
+    <!-- Costum Styles -->
+    <link rel="stylesheet" href="{% static 'acpl/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'acpl/css/responsive.css' %}">
+    <style>
+      hr{
+        height: 1px;
+        background: white;
+        border: 0;
+      }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+
+    <!-- Modernizer & Respond js -->
+    <script src="{% static 'acpl/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160222209-1">
+    </script>
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());    
+      gtag('config', 'UA-160222209-1');
+    </script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="cover"></div>
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+            <a href="/home/">
+                <img src="{% static 'acpl/img/logol.jpg' %}" alt="Acrisius Logo">
+            </a>
+        </div>            
+        <!-- Menu Hamburger (Default) -->
+        <button class="main-menu-indicator" id="open-button">
+            <span class="line"></span>
+        </button>            
+        <div class="menu-wrap" style="background-color: rgba(26, 65, 115, 0.9)">
+            <div class="menu-content">
+                <div class="navigation">
+                    <span class="pe-7s-close close-menu" id="close-button"></span>                        
+                </div>
+                <nav class="menu">
+                    <div class="menu-list">
+                        <ul>
+                            <li class="menu-item-has-children"><a href="/home/">Home</a>
+                                <!--<ul class="sub-menu">
+                                    <li><a href="index.html">- Default</a></li>
+                                    <li><a href="index-architecture.html">- Architecture</a></li>
+                                    <li><a href="index-full-slider.html">- Slider Full Width</a></li>
+                                </ul>-->
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/digital_markeing/">DIGITAL MARKETING</a></li>
+                                    <li><a href="/research_analytics/">RESEARCH & ANALYTICS</a></li>
+                                    <li><a href="/marketing_solutions/">MARKETING SOLUTIONS</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="menu-item-has-children"><a href="#">CASE STUDIES</a> -->
+                              <!-- <ul class="sub-menu">
+                                  <li><a href="digital_marketing.html">DIGITAL MARKETING</a></li>
+                                  <li><a href="research_analytics.html">RESEARCH & ANALYTICS</a></li>
+                                  <li><a href="marketing_solutions.html">MARKETING SOLUTIONS</a></li>
+                              </ul> -->
+                            </li>
+                            <!--<li class="menu-item-has-children"><a href="#">Portfolio</a>-->
+                                <!--<ul class="sub-menu">
+                                    <li><a href="portfolio-2column.html">-Portfolio 2 Column</a></li>
+                                    <li><a href="portfolio-3column.html">-Portfolio 3 Column</a></li>
+                                    <li><a href="portfolio-masonry.html">-Portfolio Masonry</a></li>
+                                    <li><a href="portfolio-dribbble.html">-Portfolio Dribbble</a></li>
+                                </ul>
+                            </li>-->
+                            <li><a href="{% url 'cases_urls:all_cases' %}">Case Studies</a></li>
+                            <li><a href="{% url 'blog_urls:all_blogs' %}">Blogs</a></li>
+                            <li><a href="{% url 'member_urls:all_members' %}">About</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="hidden-xs">
+                    <div class="menu-social-media">
+                        <ul>
+                            <li><a href="https://www.facebook.com/acrisiusconsulting/"><i class="iconmoon-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/AcrisiusL"><i class="iconmoon-twitter"></i></a></li>
+                            <li><a href="https://linkedin.com/company/acrisiusconsulting"><i class="iconmoon-linkedin2"></i></a></li>
+                            <li><a href="https://www.pinterest.com/acrisiusc/"><i class="iconmoon-pinterest"></i></a></li>
+                            <li><a href="https://www.instagram.com/acrisius_consulting/"><i class="iconmoon-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-information">
+                      <ul>
+                        <li><span>T:</span> +91 98318 40160</li>
+                        <li><span>T:</span> +91 62895 56535</li>
+                        <li>info@acrisiusconsulting.com</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Menu Hamburger (Default) -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="single-project-slider">
+
+        <div class="owl-carousel single-slider">
+          <div class="row">
+            <div class="col-sm-6">
+              <br>
+              <h1>{{ blog.title }}</h1>
+              <br><hr style="background: black;"><br>
+              <h2><b>{{ blog.author }}</b> writes on <b>{{ blog.get_categories_display }}</b>.</h2>
+              <br><hr style="background: black;"><br>
+              <h3>{{ blog.desc }}</h3>
+            </div>
+            <div class="col-sm-6">
+              <img src="{{ blog.cover_img.url }}" alt="" height="500" width="500">
+            </div>
+          </div>          
+        </div>
+
+        <br><br>
+        <div class="container-fluid">
+          <div class="row col-md-12" style="padding-left: 10%; padding-right: 10%; ">
+            <div style="background-color: #284e80; padding: 3% 3% 3% 5%; border-color: black; border-width: 15px;">
+              <h4 style="color: white;">This article was published on <b>{{ blog.date }}</b>.</h4>
+              <hr style="border-color: white; color: white;">
+              <p style="color: white;">This disclaimer informs readers that the views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author's employer, organization, committee or other group or individual.</p>
+            </div>            
+          </div>          
+        </div>
+
+        <br><br>
+        <div class="container-fluid">
+          <div class="row col-md-12" style="padding-left: 10%; padding-right: 10%; text-align: justify;">
+            <h3><b>{{ blog.content|safe }}</b></h3>
+          </div>          
+        </div>
+
+        <br><br>
+        <div class="container-fluid">
+          <div class="row col-md-12" style="padding-left: 10%; padding-right: 10%; ">
+            <div style="background-color: #284e80; padding: 3% 3% 3% 5%; border-color: black; border-width: 15px;">
+              <h3 style="color: white;"><b>References:</b></h3>
+              <hr>
+              <h5 style="color: white;">{{ blog.refr }}</h5>
+            </div>            
+          </div>          
+        </div>
+        <!--<div class="single-controls">
+            <span class="arrow-left"><a class="prev-slide" href="javascript:void(0)"><i class="pe-7s-angle-left"></i></a></span>
+            <span class="arrow-right"><a class="next-slide" href="javascript:void(0)"><i class="pe-7s-angle-right"></i></a></span>
+        </div>-->
+      </div>
+    </div>
+
+  </div>     
+    
+  <div class="footer margin-top">
+    <div class="container">
+      <div class="row">
+            
+        <div class="col-md-2 col-sm-4 col-xs-12">
+          <div class="footer-inner">            
+            <div class="footer-content">
+              <h4>OFFICE ADR.</h4>
+              <p style="font-family:Lekton;"><b>140/2A NSC Bose<br>Road, Tollygunge<br>Kolkata, WB</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-md-push-8 col-sm-4 col-xs-12">
+          <div class="footer-inner">
+            <div class="footer-content">
+              <h4>CONTACT INFO</h4>
+              <p style="font-family:Lekton;"><b>
+                T: +91 98318 40160 <br>
+                T: +91 62895 56535 <br>
+                info@acrisiusconsulting.com</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="footer-inner">
+            <div class="footer-content">
+            <ul class="social-media">
+              <li><a href="https://www.facebook.com/acrisiusconsulting/"><i class="iconmoon-facebook"></i></a></li>
+              <li><a href="https://twitter.com/AcrisiusL"><i class="iconmoon-twitter"></i></a></li>
+              <li><a href="https://linkedin.com/company/acrisiusconsulting"><i class="iconmoon-linkedin2"></i></a></li>
+              <li><a href="https://www.pinterest.com/acrisiusc/"><i class="iconmoon-pinterest"></i></a></li>
+              <li><a href="https://www.instagram.com/acrisius_consulting/"><i class="iconmoon-instagram"></i></a></li>
+            </ul>
+            <!-- <span class="copyright-mark">&copy; 2015 OAK, ALL RIGHTS RESERVED</span> -->
+            </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+  <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
+  <script src="{% static 'acpl/js/vendor/jquery-1.11.2.min.js' %}"></script>
+  <script data-pace-options='{ "ajax": false }' src="{% static 'acpl/js/vendor/pace.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/bootstrap.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/classie.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/jquery.velocity.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/jquery.kenburnsy.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/textslide.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/tabs.js' %}"></script>
+  <script src="{% static 'acpl/js/ef-slider.js' %}"></script>    
+  <script src="{% static 'acpl/js/vendor/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/jquery.social-buttons.min.js' %}"></script>
+  <script src="{% static 'acpl/js/vendor/wow.min.js' %}"></script>
+  <script src="{% static 'acpl/js/main.js' %}"></script>
+  <script src="{% static 'acpl/js/ajax.js' %}"></script>
+
+</body>
+</html>
